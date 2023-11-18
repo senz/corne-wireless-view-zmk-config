@@ -85,7 +85,6 @@
                     	     &trans &trans   &trans   &trans   &trans    &trans
                         >;
                 };
-        }; 
                 cyrillics_layer {
                         label = "Cyrillics";
                         bindings = <
