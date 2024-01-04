@@ -99,10 +99,10 @@
         nav_layer {
             label = "Nav";
             bindings = <
-&to CYR  &bootloader  &bt BT_CLR  &none   &bt BT_PRV  &bt BT_NXT    &none     &none         &none         &none      &bootloader  &trans
-&to DEF  &none        &none       &none   &none       &none         &kp LEFT  &kp DOWN      &kp UP        &kp RIGHT  &trans       &trans
-&trans   &none        &none       &none   &none       &none         &none     &kp C_VOL_DN  &kp C_VOL_UP  &none      &trans       &trans
-                                  &trans  &trans      &trans        &trans    &trans        &trans
+&to CYR  &bootloader  &bt BT_CLR  &none  &bt BT_PRV  &bt BT_NXT    &none     &none         &none         &none      &bootloader  &trans
+&to DEF  &none        &none       &none  &none       &none         &kp LEFT  &kp DOWN      &kp UP        &kp RIGHT  &trans       &trans
+&trans   &none        &none       &none  &none       &none         &none     &kp C_VOL_DN  &kp C_VOL_UP  &none      &trans       &trans
+                                  &mo 4  &trans      &trans        &trans    &trans        &trans
             >;
         };
 
@@ -114,6 +114,17 @@
 &trans   &mt LCTRL Z  &kp X  &kp C   &kp V   &kp B         &kp N   &mt RBKT M  &mt LS(N6) COMMA  &mt LS(N7) DOT  &mt LS(N2) FSLH  &trans
                              &trans  &trans  &trans        &trans  &trans      &trans
             >;
+        };
+
+        tune_layer {
+            bindings = <
+&trans  &bootloader  &bt BT_CLR  &sys_reset  &bt BT_PRV  &bt BT_NXT    &trans  &trans  &trans  &sys_reset  &bootloader  &trans
+&to 0   &trans       &trans      &trans      &trans      &trans        &trans  &trans  &trans  &trans      &trans       &trans
+&trans  &trans       &trans      &trans      &trans      &trans        &trans  &trans  &trans  &trans      &trans       &trans
+                                 &trans      &trans      &trans        &trans  &trans  &trans
+            >;
+
+            label = "tune";
         };
     };
 };
