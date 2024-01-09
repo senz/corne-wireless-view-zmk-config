@@ -21,35 +21,35 @@
     behaviors {
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_0";
+            display-name = "TAP_DANCE_0";
             #binding-cells = <0>;
             bindings = <&kp BSPC>, <&kp MINUS>;
         };
 
         td1: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_1";
+            display-name = "TAP_DANCE_1";
             #binding-cells = <0>;
             bindings = <&mt LALT EQUAL>, <&kp GRAVE>;
         };
 
         td2: tap_dance_2 {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_2";
+            display-name = "TAP_DANCE_2";
             #binding-cells = <0>;
             bindings = <&kp LPAR>, <&kp RPAR>;
         };
 
         td3: tap_dance_3 {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_3";
+            display-name = "TAP_DANCE_3";
             #binding-cells = <0>;
             bindings = <&mt HASH SEMI>, <&mt AT_SIGN TILDE>;
         };
 
         td4: tap_dance_4 {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_4";
+            display-name = "TAP_DANCE_4";
             #binding-cells = <0>;
             bindings = <&mt LBKT COMMA>, <&kp RBKT>;
         };
@@ -59,7 +59,7 @@
 
         mo_tog: behavior_mo_tog {
             compatible = "zmk,behavior-hold-tap";
-            label = "mo_tog";
+            display-name = "mo_tog";
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
@@ -77,7 +77,7 @@
             // |ESC/HY|Z/CTR|  X  |  C  |  V  |  B  |   |  N  |  M   | ,/[ | ./' | / \ | SFT  |
             //                    |     |=/OPT|SPC/GUI| |ENT/GUI| (/)|     |
 
-            label = "Base";
+            display-name = "Base";
             bindings = <
 &mo_tog SYM SYM           &kp Q        &kp W  &kp E  &kp R        &kp T             &kp Y         &kp U        &kp I  &kp O        &kp P          &caps_word
 &td0                      &kp A        &kp S  &kp D  &kp F        &kp G             &kp H         &kp J        &kp K  &kp L        &td3           &mt LA(LS(LALT)) TAB
@@ -87,7 +87,7 @@
         };
 
         symbols_layer {
-            label = "Symbols";
+            display-name = "Symbols";
             bindings = <
 &to NAV  &kp EXCL   &kp AT_SIGN  &kp LBRC  &kp RBRC     &kp PIPE     &kp N0         &kp N7   &kp N8  &kp N9  &kp KP_ASTERISK  &trans
 &to DEF  &kp HASH   &kp DOLLAR   &kp LPAR  &kp RPAR     &kp GRAVE    &kp KP_EQUAL   &kp N4   &kp N5  &kp N6  &kp KP_PLUS      &trans
@@ -97,7 +97,7 @@
         };
 
         nav_layer {
-            label = "Nav";
+            display-name = "Nav";
             bindings = <
 &to CYR  &trans  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_SHIFT  &trans    &trans    &trans    &trans  &trans     &trans  &trans
 &to DEF  &trans  &trans     &trans        &trans          &trans    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
@@ -107,7 +107,7 @@
         };
 
         cyrillics_layer {
-            label = "Cyrillics";
+            display-name = "Cyrillics";
             bindings = <
 &to DEF  &kp Q        &kp W  &kp E   &kp R   &mt BSLH T    &kp Y   &kp U       &kp I             &kp O           &kp P            &kp LBKT
 &trans   &kp A        &kp S  &kp D   &kp F   &kp G         &kp H   &kp J       &kp K             &kp L           &kp SEMI         &mt TAB SQT
@@ -124,7 +124,7 @@
                                  &trans      &trans      &trans        &trans  &trans  &trans
             >;
 
-            label = "tune";
+            display-name = "tune";
         };
     };
 };
