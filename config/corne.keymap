@@ -21,35 +21,30 @@
     behaviors {
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
-            display-name = "TAP_DANCE_0";
             #binding-cells = <0>;
             bindings = <&kp BSPC>, <&kp MINUS>;
         };
 
         td1: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
-            display-name = "TAP_DANCE_1";
             #binding-cells = <0>;
             bindings = <&mt LALT EQUAL>, <&kp GRAVE>;
         };
 
         td2: tap_dance_2 {
             compatible = "zmk,behavior-tap-dance";
-            display-name = "TAP_DANCE_2";
             #binding-cells = <0>;
             bindings = <&kp LPAR>, <&kp RPAR>;
         };
 
         td3: tap_dance_3 {
             compatible = "zmk,behavior-tap-dance";
-            display-name = "TAP_DANCE_3";
             #binding-cells = <0>;
             bindings = <&mt HASH SEMI>, <&mt AT_SIGN TILDE>;
         };
 
         td4: tap_dance_4 {
             compatible = "zmk,behavior-tap-dance";
-            display-name = "TAP_DANCE_4";
             #binding-cells = <0>;
             bindings = <&mt LBKT COMMA>, <&kp RBKT>;
         };
@@ -57,9 +52,8 @@
         // tap toggle
         // from https://zmk.dev/docs/behaviors/hold-tap#example-use-cases:~:text=Toggle%2Don%2DTap%2C%20Momentary%2Don%2DHold%20Layers
 
-        mo_tog: behavior_mo_tog {
+        mo_tog: mo_tog {
             compatible = "zmk,behavior-hold-tap";
-            display-name = "mo_tog";
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
