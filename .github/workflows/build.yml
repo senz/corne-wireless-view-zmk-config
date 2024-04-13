@@ -1,5 +1,20 @@
 on: [push, pull_request, workflow_dispatch]
 
 jobs:
+  current-date:
+    runs-on: ubuntu-latest
+    steps:
+      - name: set current date as env variable
+        id: set-date
+        shell: bash
+        run: echo "CURRENT_DATE=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+      - name: output current date
+        shell: bash
+        run: echo ${{ steps.set-date.outputs.CURRENT_DATE }}
+    outputs:
+      CURRENT_DATE: ${{ steps.set-date.outputs.CURRENT_DATE }}
   build:
+    needs: current-date
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@2adaa00d1092e41ce11dfae46ce7d2a5bad97ead
+    with:
+      archive_name: zmk-corne-${{ needs.current-date.outputs.CURRENT_DATE }}-${{ github.sha }}-${{ github.run_number }}
